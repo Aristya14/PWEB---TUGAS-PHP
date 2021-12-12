@@ -34,7 +34,7 @@ if( mysqli_num_rows($query) < 1 ){
 		html, 
         body { 
             /* height: 100%;  */
-            background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/bb257388-0134-44a2-a865-18719b331540/d5xgl4n-042cc48f-47f6-4ea7-b09d-ed63339b3c5b.jpg/v1/fill/w_1024,h_647,q_75,strp/harry_potter_hogwarts_wallpaper_by_marcobarcelon_d5xgl4n-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjQ3IiwicGF0aCI6IlwvZlwvYmIyNTczODgtMDEzNC00NGEyLWE4NjUtMTg3MTliMzMxNTQwXC9kNXhnbDRuLTA0MmNjNDhmLTQ3ZjYtNGVhNy1iMDlkLWVkNjMzMzliM2M1Yi5qcGciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.4rt4mzX-eOOfA60zuTg1DyiUIYrTDfUGYCIvo8gk9F0");
+            background-image: url("https://img.freepik.com/free-vector/black-golden-marble-background_23-2148981436.jpg?size=626&ext=jpg");
             background-position: center;
   			background-repeat: no-repeat;
   			background-size: cover;
@@ -66,7 +66,13 @@ if( mysqli_num_rows($query) < 1 ){
                 </div>
     </header>
 
-    <form action="proses-edit.php" method="POST">
+    <div class="container shadow py-4 mt-5">
+
+            <div class="p-5 mb-4 bg-light rounded-3 height: 4rem">
+                    <h3 class="display-7 fw-bold" style="color: maroon">Formulir Edit data siswa</h3>
+            </div>
+
+    <form action="proses-edit.php" method="POST" enctype="multipart/form-data">
 
         <fieldset>
 
@@ -96,7 +102,7 @@ if( mysqli_num_rows($query) < 1 ){
                 <option <?php echo ($agama == 'Kristen') ? "selected": "" ?>>Kristen</option>
                 <option <?php echo ($agama == 'Hindu') ? "selected": "" ?>>Hindu</option>
                 <option <?php echo ($agama == 'Budha') ? "selected": "" ?>>Budha</option>
-                <option <?php echo ($agama == 'Khonghucu') ? "selected": "" ?>>Khonghucu</option>
+                <option <?php echo ($agama == 'Atheis') ? "selected": "" ?>>Atheis</option>
             </select>
         </p>
 
@@ -104,6 +110,11 @@ if( mysqli_num_rows($query) < 1 ){
                 <label>Sekolah Asal:</label>
                 <input type="text" name="sekolah_asal" class="form-control" value="<?php echo $siswa['sekolah_asal']; ?>" placeholder="Masukan Sekolah Asal" required />
                
+            </div>
+
+            <div class="foto mb-3">
+                <label for="foto" class="form-label">Masukkan Foto</label>
+                <input class="form-control" name="foto" type="file" id="foto">
             </div>
 
         <p>

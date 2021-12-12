@@ -7,11 +7,15 @@
 <style type="text/css">
 		html, 
         body { 
-            /* height: 100%;  */
-            background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/bb257388-0134-44a2-a865-18719b331540/d5xgl4n-042cc48f-47f6-4ea7-b09d-ed63339b3c5b.jpg/v1/fill/w_1024,h_647,q_75,strp/harry_potter_hogwarts_wallpaper_by_marcobarcelon_d5xgl4n-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjQ3IiwicGF0aCI6IlwvZlwvYmIyNTczODgtMDEzNC00NGEyLWE4NjUtMTg3MTliMzMxNTQwXC9kNXhnbDRuLTA0MmNjNDhmLTQ3ZjYtNGVhNy1iMDlkLWVkNjMzMzliM2M1Yi5qcGciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.4rt4mzX-eOOfA60zuTg1DyiUIYrTDfUGYCIvo8gk9F0");
+            height: 100%; 
+            background-image: url("https://img.freepik.com/free-vector/black-golden-marble-background_23-2148981436.jpg?size=626&ext=jpg");
             background-position: center;
   			background-repeat: no-repeat;
   			background-size: cover;
+        }
+        .tombol{
+            background-color : blue;
+            color : white;
         }
 		.mid-center { 
             top: 50%; 
@@ -19,18 +23,18 @@
             transform: translateX(-50%) translateY(-50%); 
         }
         .des{
-            color: rgba(255, 255, 255, 1);
+            color: white;
             font-size: 2em;
             text-align : center;
             padding-top: 30px; 
             padding-bottom: 20px;
         }
         .helo {
-            color: rgba(255, 255, 255, 1);
+            color: white;
             font-size: 70px;
             font-weight: bolder;
             text-align : center;
-            padding-top: 70px;
+            padding-top: 200px;
         }
         .notifikasi {
             color: rgba(255, 255, 255, 0.5);
@@ -69,26 +73,12 @@
                     <p class="des">di situs Pendaftaran Siswa Baru SMK Coding</p>
                 <!-- </div> -->
             <!-- </div> -->
+            <div style="text-align: center;">
+                <a href="form-daftar.php" class="btn btn-outline-secondary tombol" type="button" >Daftar Baru</a>
+                <a href="list-siswa.php" class="btn btn-outline-secondary tombol" type="button">Lihat Pendaftar</a>
+            </div>
 
-            <div class="row align-items-md-stretch">
-                    <div class="col-md-6">
-                    <div class="h-100 p-5 bg-light border rounded-3">
-                        <h2>Daftar Baru</h2>
-                        <p>Klik disini untuk melakukan pendaftaran baru</p>
-                        <a href="form-daftar.php" class="btn btn-outline-secondary" type="button">Klik disini</a>
-                    </div>
-                </div>
-
-                <div class="col-md-6">
-                    <div class="h-100 p-5 bg-light border rounded-3">
-                    <h2>Lihat Pendaftar</h2>
-                    <p>klik disini untuk melihat pendaftar</p>
-                    <a href="list-siswa.php" class="btn btn-outline-secondary" type="button">Klik disini</a>
-                    </div>
-                </div>
-             </div>
-
-            <?php if(isset($_GET['status'])): ?>
+            <!-- <?php if(isset($_GET['status'])): ?>
             <p class="notif">
                 <?php
                     if($_GET['status'] == 'sukses'){
@@ -100,7 +90,7 @@
                         echo "Pendaftaran gagal!";
                     }
                 ?>
-            </p>
+            </p> -->
         <?php endif; ?>
 
 
